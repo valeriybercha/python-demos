@@ -12,4 +12,5 @@ Input commands:
 Open from 'Command Prompt (cmd)': ``` python movie_app.py ```
 
 Screenshot:
+
 ![movie app collection screenshot](https://github.com/valeriybercha/python-demos/blob/master/movie-collection-app/screen.jpg)
