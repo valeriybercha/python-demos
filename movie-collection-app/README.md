@@ -9,4 +9,7 @@ Input commands:
 * "delete", "del" - delete a movie
 * "quit", "q", "end", "exit" - quit the program
 
-Open in 'Command Prompt (cmd)' - ``` python movie_app.py ```
+Open from 'Command Prompt (cmd)': ``` python movie_app.py ```
+
+Screenshot:
+![movie app collection screenshot](https://github.com/valeriybercha/python-demos/blob/master/movie-collection-app/screen.jpg)
