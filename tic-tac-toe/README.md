@@ -19,3 +19,6 @@ Input commands:
 * "quit", "q", "end", "exit" - quit the program
 
 Open from 'Command Prompt (cmd)': ``` python game.py ```
+
+Screenshot:
+![movie app collection screenshot](https://github.com/valeriybercha/python-demos/blob/master/tic-tac-toe/screen.jpg)
