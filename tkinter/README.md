@@ -2,6 +2,7 @@
 
 Content:
 
+
 #### 1. 'Hello World' application with Tkinter module - [first-program.py](https://github.com/valeriybercha/python-demos/blob/master/tkinter/first-program.py)
 
 Topics covered:
@@ -17,3 +18,10 @@ Topics covered:
 Topics covered:
 * creating labels
 * creating input fields
+
+
+#### 3. 'Radio buttons and checkboxes' application with Tkinter module - [radio-buttons-checkboxes.py](https://github.com/valeriybercha/python-demos/blob/master/tkinter/radio-buttons-checkboxes.py)
+
+Topics covered:
+* creating radioboxes
+* creating checkboxes
