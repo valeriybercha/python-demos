@@ -7,7 +7,7 @@
 from tkinter import *
 
 
-# logic functions
+# logic for radiobuttons
 def radiobuttons():
     if var.get() == 0:
         return "0-10"
@@ -19,6 +19,7 @@ def radiobuttons():
         return "31-40"
 
 
+# logic for checkboxes
 def checkboxes():
     check_list = []
     if c1.get() == 1:
@@ -31,11 +32,13 @@ def checkboxes():
         check_list.append("YELLOW")
     return " ".join(check_list)
 
+
 # printing the result
 def print_result():
     r = radiobuttons()
     c = checkboxes()
     print("Result: Pieces - " + r + " , Colors - " + c)
+
 
 # creating the main window
 window = Tk()
@@ -66,6 +69,7 @@ che1 = Checkbutton(window, text='RED', bg='red', variable=c1, onvalue=1, offvalu
 che2 = Checkbutton(window, text='BLUE', bg='blue', variable=c2, onvalue=1, offvalue=0).pack()
 che3 = Checkbutton(window, text='GREEN', bg='green', variable=c3, onvalue=1, offvalue=0).pack()
 che4 = Checkbutton(window, text='YELLOW', bg='yellow', variable=c4, onvalue=1, offvalue=0).pack()
+
 
 # submit button
 submit = Button(window, text='Send', width=20, bg='sky blue', command=print_result).pack()
