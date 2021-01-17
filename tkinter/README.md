@@ -31,3 +31,9 @@ Topics covered:
 
 Topics covered:
 * Creating scale in tkinter
+
+
+#### 5. 'Scrollbar' application with Tkinter module - [scrollbar.py](https://github.com/valeriybercha/python-demos/blob/master/tkinter/scrollbar.py)
+
+Topics covered:
+* Creating a scrollbar in tkinter
