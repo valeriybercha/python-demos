@@ -25,3 +25,9 @@ Topics covered:
 Topics covered:
 * creating radioboxes
 * creating checkboxes
+
+
+#### 4. 'Scale' application with Tkinter module - [scale.py](https://github.com/valeriybercha/python-demos/blob/master/tkinter/scale.py)
+
+Topics covered:
+* Creating scale in tkinter
