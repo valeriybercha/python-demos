@@ -37,3 +37,9 @@ Topics covered:
 
 Topics covered:
 * Creating a scrollbar in tkinter
+
+
+#### 6. 'Toplevel' app with Tkinter module - [toplevel.py](https://github.com/valeriybercha/python-demos/blob/master/tkinter/toplevel.py)
+
+Topics covered:
+* Creating toplevel windows with Tkinter
