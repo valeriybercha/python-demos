@@ -1,4 +1,4 @@
-# GUI Calculator witj Tkinter module
+# GUI Calculator with Tkinter module
 
 Screenshot:
 
