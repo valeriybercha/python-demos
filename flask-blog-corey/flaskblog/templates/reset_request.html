@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+{% block content %}
+	<h1>Reset login</h1>
+	<div class="container">
+		<div class="row">
+			<form method="POST" action="">
+				<!-- Security token variable -->
+				{{ form.hidden_tag() }}
+				<fieldset class="form-group">
+					<legend class="border-bottom mb-4">Reset Password</legend>
+					<!-- Form fiels from 'forms.py' file -->
+					<div class="form-group">
+						{{ form.email.label(class="form-control-label") }}
+						{{ form.email(class="form-control form-control-lg") }}
+					</div>
+				</fieldset>
+				<div class="form-group">
+					{{ form.submit(class="btn btn-outline-success") }}
+				</div>
+				<small class="text-muted ml-2">
+					<a href="#">Forgot Password?</a>
+				</small>
+			</form>
+		</div>
+	</div>
+{% endblock content %}
