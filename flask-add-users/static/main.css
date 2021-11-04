@@ -1,0 +1,11 @@
+header {
+	padding: 50px 0 30px 0;
+}
+
+h1.app, h2.app {
+	font-family: 'Comfortaa', cursive;
+}
+
+h2.app {
+	padding-bottom: 20px;
+}

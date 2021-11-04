@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block main %}
+<div class="container">
+	<h2 class="text-center app">Update User</h2>
+	<div class="row">
+		<div class="mx-auto" style="width: 450px; max-width:100%">
+			<form method="POST">
+			  <div class="form-group">
+				<label for="fname">First Name</label>
+				<input type="text" class="form-control" id="fname" name="fname" value="{{ user.first_name }}">
+			  </div>
+			  <div class="form-group">
+				<label for="lname">Last Name</label>
+				<input type="text" class="form-control" id="lname" name="lname" value="{{ user.last_name }}">
+			  </div>
+			  <button type="submit" class="btn btn-primary">Update user</button>
+			  <a href="{{ url_for('index') }}" role="button" class="btn btn-outline-secondary">Back home</a>
+			</form>
+		</div>
+	</div>
+</div>
+{% endblock main %}
