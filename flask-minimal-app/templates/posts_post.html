@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block head %}	
+	<title>Posts Page</title>
+{% endblock head %}
+{% block body %}
+	<div class="container">
+		{% if post.author %}
+			<small>Posted on {{ post.date_posted }} by {{ post.author }}</small>
+		{% else %}
+			<small>Posted on {{ post.date_posted }} by Author Unknown</small>
+		{% endif %}
+		<h1>{{ post.title }}</h1>
+		<p>{{ post.content }}</p>
+	</div>
+{% endblock body %}

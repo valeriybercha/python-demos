@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block head %}	
+	<title>All posts app</title>
+{% endblock head %}
+{% block body %}
+	<div class="container">
+		<h1>All Blog Posts Below</h1>
+		<h4><a href="{{ url_for('add_posts') }}">Want to add a new post?</a></h4>
+	</div>
+	{% for post in posts %}
+		<div class="container">
+			<small>Posted on {{ post.date_posted }} by {{ post.author }}</small>
+			<h1><a class="posts" href="/posts/{{ post.id }}">{{ post.title }}</a></h1>
+			<p>{{ post.content }}</p>
+		</div>
+	{% endfor %}
+{% endblock body %}

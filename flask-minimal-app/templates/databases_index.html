@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block head %}	
+	<title>Posts App</title>
+{% endblock head %}
+{% block body %}
+	{% for post in posts[::-1] %}
+		<div class="container">
+			<small>Posted on {{ post.date_posted }} by {{ post.author }}</small>
+			<h1><a class="posts" href="/posts/{{ posts.index(post) }}">{{ post.title }}</a></h1>
+			<p>{{ post.content }}</p>
+		</div>
+	{% endfor %}
+{% endblock body %}

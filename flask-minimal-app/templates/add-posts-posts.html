@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block head %}	
+	<title>Posts Page</title>
+{% endblock head %}
+{% block body %}
+	<div class="container">
+		<small>Posted on {{ post.date_posted }} by {{ post.author }}</small>
+		<h1>{{ post.title }}</h1>
+		<p>{{ post.content }}</p>
+	</div>
+	<div class="container">
+		<h5><a href="{{ url_for('all_posts') }}">Back home</a></h5>
+	</div>
+	<div class="container">
+		<form action="/posts/update/{{ post.id }}">
+			<button type="submit">Update</button>
+		</form>
+		<form action="/posts/delete/{{ post.id }}">
+			<button type="submit">Delete</button>
+		</form>
+	</div>
+{% endblock body %}

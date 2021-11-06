@@ -1,0 +1,48 @@
+body {
+	background-color: #f1f1f1;
+	
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Bebas Neue', cursive;
+}
+
+p {
+	font-family: 'Roboto', sans-serif;
+}
+
+.container {
+	margin: 40px;
+}
+
+/* Site count app style */
+h1.sc , h3.sc {
+	text-align: center;
+}
+
+h1.sc {
+	color: lightskyblue;
+	margin-top: 5em;
+}
+
+/* Posts app style */
+h1.posts {
+	color: lightskyblue;
+	margin-top: 5em;
+}
+
+a.posts {
+	color: black;
+	text-decoration: none;
+}
+
+a.posts:hover {
+	color: lightskyblue;
+	text-decoration: underline;
+}
+
+/* Add posts app style */
+
+.addPosts {
+	margin-top: 20px;
+}
