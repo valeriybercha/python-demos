@@ -19,4 +19,4 @@
 - ```pip install flask```
 - ```pip install flask-sqlalchemy```
     
-* This app is created for showcase purposes only
+This app is created for showcase purposes only
