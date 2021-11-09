@@ -1,0 +1,27 @@
+{% extends 'base-posts.html' %}
+
+{% set active_page = 'active_add_post' %}
+
+{% block blog_header %}
+	<div class="blog-header">
+		<h2 class="blog-post-title">Add a new post</h2>
+	</div>
+{% endblock blog_header %}
+
+{% block main %}
+	<form method="POST">
+	  <div class="form-group">
+		<label for="title">Post Title</label>
+		<input type="text" class="form-control" id="title" name="title" placeholder="Post title">
+	  </div>
+	  <div class="form-group">
+		<label for="author">Author</label>
+		<input type="text" class="form-control" id="author" name="author" placeholder="Author">
+	  </div>
+	  <div class="form-group">
+		<label for="content">Content</label>
+		<textarea class="form-control" id="content" name="content" rows="10" placeholder="Post content"></textarea>
+	  </div>
+	  <button type="submit" class="btn btn-primary">Add post</button>
+	</form>	
+{% endblock main %}

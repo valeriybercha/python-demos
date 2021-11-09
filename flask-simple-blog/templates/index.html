@@ -1,0 +1,33 @@
+{% extends 'base-posts.html' %}
+
+{% set active_page = 'active_index' %}
+
+{% block blog_header %}
+	<div class="blog-header">
+		<h1 class="blog-title">{{ default_variables[0] }}</h1>
+		<p class="lead blog-description">{{ default_variables[1] }}</p>
+	</div>
+{% endblock blog_header %}	
+
+{% block main %}
+	{% if posts|length == 0 %}
+		<div class="jumbotron">
+			<h2 class="text-center">There are NO posts created yet!</h2>
+			<p class="text-center"><a href="{{ url_for('add_post')}}">Create your first post</a></p>
+		</div>
+	{% else %}
+		{% for post in posts[::-1] %}
+			<div class="blog-post">
+				<a href="/post/{{ post.id }}"><h2 class="blog-post-title">{{ post.title }}</h2></a>
+				<p class="blog-post-meta">{{ post.date_posted.strftime("%d %b %Y") }} by <a href="#">{{ post.author }}</a></p>
+				<p>{{ post.content }}</p>
+			</div>
+		{% endfor %}
+		<nav>
+			<ul class="pager">
+				<li><a href="#">Previous</a></li>
+				<li><a href="#">Next</a></li>
+			</ul>
+		</nav>
+	{% endif %}
+{% endblock main %}

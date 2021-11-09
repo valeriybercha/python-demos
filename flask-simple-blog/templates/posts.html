@@ -1,0 +1,20 @@
+{% extends 'base-posts.html' %}
+
+{% block blog_header %}
+	<div class="blog-header">
+		<h2 class="blog-post-title">{{ post.title }}</h2>
+		<p class="blog-post-meta">{{ post.date_posted.strftime("%d %b %Y") }} by <a href="#">{{ post.author }}</a></p>
+	</div>
+{% endblock blog_header %}
+
+{% block main %}
+	
+	<div class="blog-post">
+		<p>{{ post.content }}</p>
+		
+		<hr>
+		<a href="/post/{{ post.id }}/update" role="button" class="btn btn-primary">Update</a>
+		<a href="/post/{{ post.id }}/delete" role="button" class="btn btn-danger">Delete</a>
+	</div>
+	
+{% endblock main %}

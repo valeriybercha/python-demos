@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% set active_page = 'page.id' %}
+
+{% block body %}
+	<div class="blog-header">
+		<h2 class="blog-post-title">{{ page.title }}</h2>
+	</div>
+	<div class="blog-post">
+		<p>{{ page.content }}</p>
+	
+		<hr>
+		<a href="/page/{{ page.id }}/update" role="button" class="btn btn-primary">Update</a>
+		<a href="/page/{{ page.id }}/delete" role="button" class="btn btn-danger">Delete</a>
+	</div>
+	
+{% endblock body %}

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}<title>About page</title>{% endblock title %}
+
+{% block body %}
+	<div class="blog-header">
+		<h2 class="blog-post-title">About</h2>
+	</div>
+	<div class="blog-post">
+		<div class="jumbotron">
+			<p>This app is created for showcase purposes only</p>
+		</div>
+		
+		<h4>Basic information:</h4>
+		<ul>
+			<li>Blog app created with Flask and Python</li>
+			<li>Programming language: Python 3.6.9</li>
+			<li>Developer: <a href="https://github.com/valeriybercha" target="_blank">Valeriy B.</a></li>
+		</ul>
+		
+		<h4>Functionality:</h4>
+		<ul>
+			<li>Add a post</li>
+			<li>Add a page</li>
+			<li>Update a post</li>
+			<li>Delete a post</li>
+			<li>Update a page</li>
+			<li>Delete a page</li>
+		</ul>
+		
+		<h4>Libraries to install:</h4>
+		<ul>
+			<li>pip install flask</li>
+			<li>pip install flask-sqlalchemy</li>
+		</ul>
+	</div>
+	
+{% endblock body %}

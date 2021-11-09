@@ -1,0 +1,23 @@
+{% extends 'base-posts.html' %}
+
+{% set active_page = 'active_add_page' %}
+
+{% block blog_header %}
+	<div class="blog-header">
+		<h2 class="blog-post-title">Add a new page</h2>
+	</div>
+{% endblock blog_header %}
+
+{% block main %}
+	<form method="POST">
+	  <div class="form-group">
+		<label for="title">Page Title</label>
+		<input type="text" class="form-control" id="title" name="title" placeholder="Page title">
+	  </div>
+	  <div class="form-group">
+		<label for="content">Content</label>
+		<textarea class="form-control" id="content" name="content" rows="10" placeholder="Page content"></textarea>
+	  </div>
+	  <button type="submit" class="btn btn-primary">Add page</button>
+	</form>	
+{% endblock main %}
