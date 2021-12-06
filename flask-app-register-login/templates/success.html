@@ -1,0 +1,7 @@
+<!-- SUCCESS TEMPLATE -->
+{% extends 'layout.html' %}
+{% block title %}Success{% endblock title %}
+{% block header  %}{{ message }} successfully!{% endblock header %}
+{% block main %}
+	<p>You {{ message.lower() }} successfully!</p>
+{% endblock main %}

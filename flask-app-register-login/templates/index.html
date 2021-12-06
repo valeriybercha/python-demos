@@ -1,0 +1,52 @@
+<!-- INDEX TEMPLATE -->
+{% extends 'layout.html' %}
+{% block title %}Home/Register{% endblock title %}
+{% block header %}User registration and login{% endblock header %}
+{% block main %}
+	<p>Register a user to the database</p>
+	<form method="POST", action="/">
+		{{ form.csrf_token }}
+		{{ form.username.label }}<br>
+		{{ form.username(size=25) }}<br>
+		{{ form.fullname.label }}<br>
+		{{ form.fullname(size=25) }}<br>
+		{{ form.email.label }}<br>
+		{{ form.email(size=25) }}<br>
+		{{ form.password.label }}<br>
+		{{ form.password(size=25) }}<br>
+		{{ form.confirmPassword.label }}<br>
+		{{ form.confirmPassword(size=25) }}<br>
+		{{ form.submit() }}
+	</form>
+	{% if form.username.errors %}
+		<ul class="errors">
+			{% for error in form.username.errors %}
+				<li>{{ error }}</li>
+			{% endfor %}
+		</ul>
+	{% elif form.fullname.errors %}
+		<ul class="errors">
+			{% for error in form.fullname.errors %}
+				<li>{{ error }}</li>
+			{% endfor %}
+		</ul>
+	{% elif form.email.errors %}
+		<ul class="errors">
+			{% for error in form.email.errors %}
+				<li>{{ error }}</li>
+			{% endfor %}
+		</ul>
+	{% elif form.password.errors %}
+		<ul class="errors">
+			{% for error in form.password.errors %}
+				<li>{{ error }}</li>
+			{% endfor %}
+		</ul>
+	{% elif form.confirmPassword.errors %}
+		<ul>
+			{% for error in form.confirmPassword.errors %}
+				<li>{{ error }}</li>
+			{% endfor %}
+		</ul>
+	{% endif %}
+{% endblock main %}

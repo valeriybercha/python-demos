@@ -1,0 +1,21 @@
+<!-- USERS TEMPLATE -->
+{% extends 'layout.html' %}
+{% block title %}Users{% endblock title %}
+{% block header %}All registered users{% endblock header %}
+{% block main %}
+	<p>There are currently {{ users|length }} users registered in the database</p>
+	<table>
+		<tr>
+			<th>FULL NAME</th>
+			<th>USERNAME</th>
+			<th>EMAIL</th>
+		</tr>
+		{% for user in users[::-1] %}
+			<tr>
+				<th>{{ user.fullname }}</th>
+				<th>{{ user.username }}</th>
+				<th>{{ user.email }}</th>
+			</tr>
+		{% endfor %}
+	</table>
+{% endblock main %}
