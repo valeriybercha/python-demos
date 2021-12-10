@@ -1,0 +1,52 @@
+<!-- INDEX PAGE -->
+{% extends 'layout.html' %}
+{% block title %}Home{% endblock title %}
+{% block header %}User register and login{% endblock header %}
+{% block main %}
+	<form method="POST">
+		{{ form.csrf_token }}
+		{{ form.email.label }}<br>
+		{{ form.email() }}<br>
+		{{ form.name.label }}<br>
+		{{ form.name() }}<br>
+		{{ form.password.label }}<br>
+		{{ form.password() }}<br>
+		{{ form.confirm_password.label }}</br>
+		{{ form.confirm_password() }}<br>
+		<p></p>
+		<!-- <input type="submit" value="Sign Up"> -->
+		{{ form.submit() }}
+	</form>
+	{% if form.email.errors %}
+		<ul>
+		{% for error in form.email.errors %}
+			<li>{{ error }}</li>
+		{% endfor %}
+		</ul>
+	{% elif form.name.errors %}
+		<ul>
+		{% for error in form.name.errors %}
+			<li>{{ error }}</li>
+		{% endfor %}
+		</ul>
+	{% elif form.password.errors %}
+		<ul>
+		{% for error in form.password.errors %}
+			<li>{{ error }}</li>
+		{% endfor %}
+		</ul>
+	{% elif form.confirm_password.errors %}
+		<ul>
+		{% for error in form.confirm_password.errors %}
+			<li>{{ error }}</li>
+		{% endfor %}	
+		</ul>
+	{% endif %}
+	{% with messages = get_flashed_messages(with_categories=true) %}
+		{% if messages %}
+			{% for category, message in messages %}
+				<p>{{ message }}</p>
+			{% endfor %}
+		{% endif %}
+	{% endwith %}
+{% endblock main %}

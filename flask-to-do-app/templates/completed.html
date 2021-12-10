@@ -1,0 +1,25 @@
+<!-- COMPLETED TASKS PAGE -->
+{% extends 'layout.html' %}
+{% block title %}Completed{% endblock title %}
+{% block header %}Completed tasks{% endblock header %}
+{% block main %}
+	<p>There are currently {{ tasks|length }} completed tasks on the list</p>
+	{% if tasks %}
+	<table>
+		<tr>
+			<th>Nr.</th>
+			<th>TASK</th>
+			<th>ADDED DATA</th>
+			<th>ACTION</th>
+		</tr>
+		{% for task in tasks %}
+		<tr>
+			<td><small>{{ tasks.index(task) + 1 }}</small></td>
+			<td><b>{{ task.task }}</b></td>
+			<td><i>{{ task.task_added.strftime('%Y-%m-%d, %H:%M') }}</i></td>
+			<td><a href="/undone/{{ task.id }}">Undone</a> | <a href="/deletec/{{ task.id }}">Delete</a></td>
+		</tr>
+		{% endfor %}
+	</table>
+	{% endif %}
+{% endblock main %}

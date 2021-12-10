@@ -1,0 +1,25 @@
+<!-- LAYOUT PAGE -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>{% block title %}{% endblock title %} - Registration and login app</title>
+</head>
+<body>
+	<h1>{% block header %}{% endblock header %}</h1>
+	<p>
+		<a href="{{ url_for('index') }}">Home</a> | 
+		{% if current_user.is_authenticated %}
+			<a href="{{ url_for('users') }}">Users</a> | 
+			<a href="{{ url_for('completed_tasks') }}">Completed</a> |
+			<a href="{{ url_for('logout') }}">Logout</a> |
+		{% else %}
+			<a href="{{ url_for('login') }}">Login</a> | 
+			<a href="{{ url_for('register') }}">Register</a> |
+		{% endif %} 
+		<a href="{{ url_for('about') }}">About</a>
+	</p>
+	{% block main %}{% endblock main %}
+	<hr>
+	<p>This app is created using Flask, Flask-WTForms, Flask-SQLAlchemy, Flask-Login</p>
+</body>
+</html>

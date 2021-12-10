@@ -1,0 +1,45 @@
+<!-- INDEX PAGE -->
+{% extends 'layout.html' %}
+{% block title %}Home{% endblock title %}
+{% block header %}'To Do' application{% endblock header %}
+{% block main %}
+	{% if current_user.is_authenticated %}
+		<form method="POST">
+			{{ form.csrf_token }}
+			{{ form.task.label }}<br>
+			{{ form.task() }}<br>
+			<p></p>
+			{{ form.submit() }}
+		</form>
+		{% if form.task.errors %}
+			<ul>
+			{% for error in form.task.errors %}
+				<li>{{ error }}</li>
+			{% endfor %}
+		{% endif %}
+		<h3>Tasks to do</h3>
+		<p>There are currently {{ tasks|length }} tasks on the list</p>
+		{% if tasks %}
+		<table>
+			<tr>
+				<th>Nr.</th>
+				<th>TASK</th>
+				<th>ADDED DATA</th>
+				<th>ACTION</th>
+			</tr>
+			{% for task in tasks %}
+			<tr>
+				<td><small>{{ tasks.index(task) + 1 }}</small></td>
+				<td><b>{{ task.task }}</b></td>
+				<td><i>{{ task.task_added.strftime('%Y-%m-%d, %H:%M') }}</i></td>
+				<td><a href="/done/{{ task.id }}">Done</a> | <a href="/update/{{ task.id }}">Update</a> | <a href="/delete/{{ task.id }}">Delete</a></td>
+			</tr>
+			{% endfor %}
+		</table>
+		{% endif %}
+	{% else %}
+		<h3>Welcome!</h3>
+		<p><a href="{{ url_for('login') }}">Login</a> into the system for using the app</p>
+		<p>Don't have an account yet? <a href="{{ url_for('register') }}">Create an account</a></p>
+	{% endif %}
+{% endblock main %}

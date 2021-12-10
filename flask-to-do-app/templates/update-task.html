@@ -1,0 +1,11 @@
+<!-- TASK UPDATE PAGE -->
+{% extends 'layout.html' %}
+{% block title %}Update{% endblock title %}
+{% block header %}Task update{% endblock header %}
+{% block main %}
+	<form method="POST">
+		<!-- <input type="submit" value="Sign Up"> -->
+		<input type="text" id="task" name="task" value="{{ task_to_update.task }}" />
+		<input type="submit" value="Update">
+	</form>
+{% endblock main %}
